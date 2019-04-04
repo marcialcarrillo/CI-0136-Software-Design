@@ -7,7 +7,6 @@ AristaDirectional::AristaDirectional(Arista& arista, bool directional) : arista(
 
 AristaDirectional::~AristaDirectional()
 {
-	cout << "destroys the directional arrow" << endl;
 	(&arista)->~Arista();
 }
 string AristaDirectional::toString() const
