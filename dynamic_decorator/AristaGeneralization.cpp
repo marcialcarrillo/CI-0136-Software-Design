@@ -18,6 +18,6 @@ AristaGeneralization::~AristaGeneralization()
 string AristaGeneralization::toString() const
 {
 	ostringstream oss;
-	oss << type << "-type arrow.";
+	oss << "A generalization-type arrow.";
 	return oss.str();
 }

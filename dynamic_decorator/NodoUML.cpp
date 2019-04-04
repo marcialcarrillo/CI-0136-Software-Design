@@ -1,6 +1,6 @@
 #include "NodoUML.h"
 
-NodoUML::NodoUML(Nodo & nodo)
+NodoUML::NodoUML(&Nodo nodo)
 {
 }
 
