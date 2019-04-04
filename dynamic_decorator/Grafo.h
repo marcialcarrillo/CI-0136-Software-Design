@@ -2,6 +2,8 @@
 #include <map>
 #include "Arista.h"
 #include <vector>
+#include <sstream>
+using namespace std;
 
 class Grafo{
 	private:
@@ -11,6 +13,6 @@ class Grafo{
 		Grafo() {};
 		~Grafo() {};
 		void addNode(Nodo *);
-		void addRelation(int, int);
+		void addRelation(int, int, Arista *);
 		string getRelation(int, int);
 };
