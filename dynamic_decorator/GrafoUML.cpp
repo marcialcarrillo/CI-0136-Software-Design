@@ -5,4 +5,4 @@ class GrafoUML : public Grafo{
 		Grafo grafo;
 	public:
 		GrafoUML();
-}
+};

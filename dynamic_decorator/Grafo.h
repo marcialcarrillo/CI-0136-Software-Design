@@ -1,5 +1,7 @@
 #include "Nodo.h"
 #include <map>
+#include "Arista.h"
+#include <vector>
 
 class Grafo{
 	private:

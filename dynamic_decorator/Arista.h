@@ -5,6 +5,11 @@ class Arista{
 		Nodo* first;
 		Nodo* second;
 	public:
-		Arista(Nodo* first, Nodo* second);
-		
+		Arista() {}
+		Arista(Nodo* first, Nodo* second){
+			this->first = first;
+			this->second = second;
+		}
+		virtual ~Arista() {}
+		virtual string toString() const = 0;
 };

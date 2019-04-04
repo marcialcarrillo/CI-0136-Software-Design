@@ -8,7 +8,7 @@ class NodoUML : public Nodo{
 		list<string> attributes;
 
 	public:
-		NodoUML(Nodo& nodo);
+		NodoUML(&Nodo);
 		void addMethod(string);
 		void addAttribute(string);
 };
