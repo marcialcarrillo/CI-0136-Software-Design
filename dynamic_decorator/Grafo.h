@@ -11,4 +11,4 @@ class Grafo{
 		void addNode(Nodo *);
 		void addRelation(int, int);
 		string getRelation(int, int);
-}
+};

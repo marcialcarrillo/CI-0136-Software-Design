@@ -7,4 +7,4 @@ class Arista{
 	public:
 		Arista(Nodo* first, Nodo* second);
 		
-}
+};
