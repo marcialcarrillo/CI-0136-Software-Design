@@ -1,23 +1,23 @@
 #pragma once
-#include "AristaAggregation.h"
+#include "AristaRealization.h"
 #include <iostream>
 using namespace std;
 
 
-AristaAggregation::AristaAggregation(Arista& arista) : arista(arista), type("aggregation")
+AristaRealization::AristaRealization(Arista& arista) : arista(arista), type("realization")
 {
 }
 
 
-AristaAggregation::~AristaAggregation()
+AristaRealization::~AristaRealization()
 {
-	cout << "destroys the aggregation-type arrow" << endl;
+	cout << "destroys the realization-type arrow" << endl;
 	(&arista)->~Arista();
 }
 
-string AristaAggregation::toString() const
+string AristaRealization::toString() const
 {
 	ostringstream oss;
-	oss << type << "-type arrow.";
+	oss << "A realization-type arrow.";
 	return oss.str();
 }
