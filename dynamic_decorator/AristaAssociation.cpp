@@ -4,7 +4,7 @@
 using namespace std;
 
 
-AristaAssociation::AristaAssociation(Arista& arista) : arista(arista), type("association")
+AristaAssociation::AristaAssociation(Arista& arista) : arista(arista), type{"association"}
 {
 }
 
