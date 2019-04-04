@@ -13,4 +13,4 @@ Nodo::Nodo(string title, int x, int y) : title{ title }, x{ x }, y{ y }
 //	this.y = y;
 //}
 
-virtual Nodo::~Nodo(){}
+Nodo::~Nodo(){}

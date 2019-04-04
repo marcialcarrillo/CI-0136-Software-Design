@@ -3,12 +3,11 @@
 
 class NodoUML : public Nodo{
 	private:
-		Nodo& Nodo;
 		list<string> methods;
 		list<string> attributes;
 
 	public:
-		NodoUML(&Nodo);
+		NodoUML(string, int, int);
 		void addMethod(string);
 		void addAttribute(string);
 };
