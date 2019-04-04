@@ -10,9 +10,9 @@ class Grafo{
 		vector<Nodo *> nodos;
 		map<int, Arista *> aristas;
 	public:
-		Grafo() {};
-		~Grafo() {};
+		Grafo();
+		~Grafo();
 		void addNode(Nodo *);
 		void addRelation(int, int, Arista *);
-		string getRelation(int, int);
+		string getRelation(int, int) const;
 };
