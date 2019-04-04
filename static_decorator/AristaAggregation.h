@@ -1,16 +1,40 @@
 #pragma once
-
+#include <sstream>
+#include <iostream>
 #include "Arista.h"
 using namespace std;
 
-class AristaAggregation : public Arista
-{
-public:
-	AristaAggregation(Arista& arista);
-	~AristaAggregation();
-	virtual string toString() const;
+#include "Arista.h"
 
+template < typename T >
+class AristaAggregation : public T
+{
+    // Impide que se use ColoredShape con un tipo T que NO herede de Shape!!!
+    static_assert(is_base_of<Arista, T>::value, "Template argument must be an Arista");
+    
+public:
+    // el uso de ...Args permite que toda una lista de parĂ¡metros sea pasada a T mediante constructores "forward".
+    template < typename ...Args >
+    AristaAggregation(Args ...args) : T(std::forward<Args>(args)...), type{ "aggregation" } {
+    };
+    
+    ~AristaAggregation(){
+    };
+        
+
+
+	string toString() const
+	{
+		ostringstream oss;
+		oss << T::toString() << type << "-type arrow.";
+		return oss.str();
+	}
+    
+    string getType() const {
+        return type;
+    }
+    
 private:
-	Arista& arista;
 	string type;
 };
+
