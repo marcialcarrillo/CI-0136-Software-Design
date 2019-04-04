@@ -1,5 +1,4 @@
 #pragma once
-#include "AristaAggregation.h"
 #include "AristaDirectional.h"
 
 AristaDirectional::AristaDirectional(Arista& arista, bool directional) : arista(arista), directional(directional)

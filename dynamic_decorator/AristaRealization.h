@@ -2,11 +2,11 @@
 #include "Arista.h"
 using namespace std;
 
-class AristaGeneralization : public Arista
+class AristaRealization : public Arista
 {
 public:
-	AristaGeneralization(Arista& arista);
-	~AristaGeneralization();
+	AristaRealization(Arista& arista);
+	~AristaRealization();
 	virtual string toString() const override;
 
 private:
