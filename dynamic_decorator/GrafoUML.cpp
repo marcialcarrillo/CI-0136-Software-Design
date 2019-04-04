@@ -1,8 +1,16 @@
-#include "Grafo.h"
+#include "GrafoUML.h"
 
-class GrafoUML : public Grafo{
-	private:
-		Grafo grafo;
-	public:
-		GrafoUML();
-};
+
+GrafoUML::GrafoUML(){}
+
+void GrafoUML::addNode(Nodo * nodo){
+	grafo.addNode(nodo)
+}
+
+void GrafoUML::addRelation(int nodo1, int nodo2, Arista * arista){
+	grafo.addRelation(nodo1, nodo2, arista);
+}
+
+string GrafoUML::getRelation(int nodo1, int nodo2){
+	grafo.getRelation(nodo1, nodo2);
+}
