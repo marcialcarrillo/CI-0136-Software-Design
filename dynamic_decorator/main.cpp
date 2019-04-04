@@ -5,4 +5,7 @@
 
 using namespace std;
 
-NodoUML test;
+int main() {
+
+	return 0;
+}

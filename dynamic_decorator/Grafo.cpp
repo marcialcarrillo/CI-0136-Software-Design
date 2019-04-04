@@ -21,7 +21,7 @@ string Grafo::getRelation(int nodo1, int nodo2){
 	ostringstream oss;
 	if (aristas.find(key) != aristas.end())
 	{
-		oss << *(aristas.find(key)->second)->toString;
+		oss << (aristas.find(key)->second)->toString;
 	}
 	else
 	{
