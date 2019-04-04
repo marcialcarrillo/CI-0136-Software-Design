@@ -19,7 +19,14 @@ void Grafo::addRelation(int nodo1, int nodo2, Arista * arista){
 string Grafo::getRelation(int nodo1, int nodo2){
 	int key = (nodo1 * 10) + nodo2;
 	ostringstream oss;
-	oss << *(aristas.find(key)->second) << radius;
+	if (aristas.find(key) != aristas.end())
+	{
+		oss << *(aristas.find(key)->second)->toString;
+	}
+	else
+	{
+		cout << "Relation not found";
+	}
 	return oss.str();
 
 }

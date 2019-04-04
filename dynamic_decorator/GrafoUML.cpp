@@ -4,7 +4,7 @@
 GrafoUML::GrafoUML(){}
 
 void GrafoUML::addNode(Nodo * nodo){
-	grafo.addNode(nodo)
+	grafo.addNode(nodo);
 }
 
 void GrafoUML::addRelation(int nodo1, int nodo2, Arista * arista){

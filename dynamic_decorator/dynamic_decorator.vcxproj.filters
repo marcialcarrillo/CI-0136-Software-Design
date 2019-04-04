@@ -36,6 +36,24 @@
     <ClInclude Include="NodoUML.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="AristaAssociation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AristaComposition.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AristaContainment.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AristaDependency.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AristaGeneralization.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AristaRealization.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AristaAggregation.cpp">
@@ -57,6 +75,24 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="NodoUML.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AristaComposition.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AristaAssociation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AristaContainment.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AristaDependency.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AristaGeneralization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AristaRealization.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

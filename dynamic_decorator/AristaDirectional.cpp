@@ -26,4 +26,4 @@ string AristaDirectional::toString() const
 	}
 	
 }
-#pragma once
+
