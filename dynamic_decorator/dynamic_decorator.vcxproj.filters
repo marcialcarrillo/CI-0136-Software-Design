@@ -21,9 +21,6 @@
     <ClInclude Include="AristaAggregation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="AristaD.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="AristaDirectional.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -41,13 +38,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Arista.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="AristaAggregation.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="AristaD.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="AristaDirectional.cpp">

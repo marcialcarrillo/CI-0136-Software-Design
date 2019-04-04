@@ -1,4 +1,6 @@
 #include "Nodo.h"
+#include <sstream>
+#include <iostream>
 
 class Arista{
 	protected:

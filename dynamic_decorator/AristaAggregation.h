@@ -7,6 +7,7 @@ class AristaAggregation : public Arista
 public:
 	AristaAggregation(Arista& arista);
 	~AristaAggregation();
+	virtual string toString() const override;
 
 private:
 	Arista& arista;

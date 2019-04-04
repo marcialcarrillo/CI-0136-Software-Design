@@ -21,7 +21,6 @@
   <ItemGroup>
     <ClInclude Include="Arista.h" />
     <ClInclude Include="AristaAggregation.h" />
-    <ClInclude Include="AristaD.h" />
     <ClInclude Include="AristaDirectional.h" />
     <ClInclude Include="Grafo.h" />
     <ClInclude Include="GrafoUML.h" />
@@ -29,9 +28,7 @@
     <ClInclude Include="NodoUML.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Arista.cpp" />
     <ClCompile Include="AristaAggregation.cpp" />
-    <ClCompile Include="AristaD.cpp" />
     <ClCompile Include="AristaDirectional.cpp" />
     <ClCompile Include="Grafo.cpp" />
     <ClCompile Include="GrafoUML.cpp" />
