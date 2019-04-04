@@ -1,4 +1,5 @@
 #pragma once
+
 #include "Arista.h"
 using namespace std;
 

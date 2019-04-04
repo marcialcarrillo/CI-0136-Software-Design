@@ -1,5 +1,7 @@
 #pragma once
+
 #include "Arista.h"
+
 using namespace std;
 
 class AristaGeneralization : public Arista

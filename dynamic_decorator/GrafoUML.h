@@ -1,3 +1,5 @@
+#pragma once
+
 #include "Grafo.h"
 #include "Arista.h"
 #include <string>

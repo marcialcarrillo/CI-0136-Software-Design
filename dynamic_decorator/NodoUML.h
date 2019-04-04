@@ -1,3 +1,5 @@
+#pragma once
+
 #include "Nodo.h"
 #include <list>
 
