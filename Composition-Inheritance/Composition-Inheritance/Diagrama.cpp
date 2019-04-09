@@ -10,6 +10,10 @@ string getIcon()
 	return pathToIcon;
 }
 
+void Diagrama::agregarNodo(int nodo) {
+	this->push_back.grafo.getNode(nodo);
+}
+
 void Diagrama::seleccionar() {
 	cout << "Se seleccionó el nodo" << title << endl;
 }
