@@ -133,6 +133,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AristaDirectional.cpp" />
+    <ClCompile Include="Diagrama.cpp" />
     <ClCompile Include="Grafo.cpp" />
     <ClCompile Include="GrafoUML.cpp" />
     <ClCompile Include="main.cpp" />

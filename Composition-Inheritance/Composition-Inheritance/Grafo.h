@@ -15,6 +15,7 @@ class Grafo{
 		Grafo();
 		~Grafo();
 		void addNode(Nodo *);
+		Nodo * get
 		void addRelation(int, int, Arista *);
 		string getRelation(int, int) const;
 };
