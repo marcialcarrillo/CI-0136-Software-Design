@@ -18,10 +18,6 @@ void Diagrama::agregarNodo(int nodo) {
 void Diagrama::seleccionar() {
 	cout << "Se seleccionó el nodo" << title << endl;
 
-void Diagrama::seleccionar() {
-	cout << "Se seleccionó el diagrama" << title << endl;
-}
-
 void Diagrama::cortar() {
 	cout << "Se cortó el diagrama " << title << endl;
 }
