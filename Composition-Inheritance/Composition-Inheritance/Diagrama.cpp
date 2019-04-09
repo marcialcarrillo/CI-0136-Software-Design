@@ -25,10 +25,9 @@ void Diagrama::agregarNodo(int nodo) {
 
 void Diagrama::seleccionar() {
 	cout << "Se seleccionó el diagrama " << title << endl;
-	for (int i = 0; i < this->size; i++)
+	for (Elementos* element : (*this))
 	{
-		Elementos* element = (*this)[i];
-		element->seleccionar;
+		(*element).seleccionar();
 	}
 }
 
@@ -70,7 +69,7 @@ void Diagrama::aumentar(float aumento) {
 
 void Diagrama::reducir(float decremento) {
 	cout << "Se redujo el diagrama" << title << " en " << decremento << endl;
-	for (int i = 0; i < this->size; i++)
+	for (int i = 0; i < (*this).size; i++)
 	{
 		Elementos* element = (*this)[i];
 		element->reducir;
