@@ -24,4 +24,5 @@ class Diagrama : public vector < Elementos * >, public Elementos
 		void aumentar(float);
 		void reducir(float);
 		void dibujar();
+		
 };

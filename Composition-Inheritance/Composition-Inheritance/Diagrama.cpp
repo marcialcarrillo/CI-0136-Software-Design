@@ -25,63 +25,57 @@ void Diagrama::agregarNodo(int nodo) {
 
 void Diagrama::seleccionar() {
 	cout << "Se seleccionó el diagrama " << title << endl;
-	for (int i = 0; i < this->size; i++)
+	for (Elementos* element : (*this))
 	{
-		Elementos* element = (*this)[i];
-		element->seleccionar;
+		element->seleccionar();
 	}
 }
 
 void Diagrama::cortar() {
 	cout << "Se cortó el diagrama " << title << endl;
-	for (int i = 0; i < this->size; i++)
+	for (Elementos* element : (*this))
 	{
-		Elementos* element = (*this)[i];
-		element->cortar;
+		element->cortar();
 	}
 }
 
 void Diagrama::pegar() {
 	cout << "Se pegó el diagrama " << title << endl;
-	for (int i = 0; i < this->size; i++)
+	for (Elementos* element : (*this))
 	{
-		Elementos* element = (*this)[i];
-		element->pegar;
+		element->pegar();
 	}
 }
 
 void Diagrama::eliminar() {
 	cout << "Se eliminó el diagrama" << title << endl;
-	for (int i = 0; i < this->size; i++)
+	for (Elementos* element : (*this))
 	{
-		Elementos* element = (*this)[i];
-		element->eliminar;
+		element->eliminar();
 	}
 }
 
 void Diagrama::aumentar(float aumento) {
 	cout << "Se aumentó el diagrama" << title << " en " << aumento << endl;
-	for (int i = 0; i < this->size; i++)
+	for (Elementos* element : (*this))
 	{
-		Elementos* element = (*this)[i];
-		element->aumentar;
+		element->aumentar(aumento);
 	}
 }
 
 void Diagrama::reducir(float decremento) {
 	cout << "Se redujo el diagrama" << title << " en " << decremento << endl;
-	for (int i = 0; i < this->size; i++)
+	for (Elementos* element : (*this))
 	{
-		Elementos* element = (*this)[i];
-		element->reducir;
+		element->reducir(decremento);
 	}
 }
 
 void Diagrama::dibujar() {
 	cout << "Se dibuja el diagrama " << title << endl;
-	for (int i = 0; i < this->size; i++)
+	for (Elementos* element : (*this))
 	{
-		Elementos* element = (*this)[i];
-		element->dibujar;
+		element->seleccionar();
 	}
 }
+
