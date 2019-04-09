@@ -3,8 +3,8 @@
 class Elementos 
 {
 	public:
-		Elementos();
-		~Elementos();
+		Elementos(){}
+		~Elementos() {}
 
 		virtual void seleccionar() = 0;
 		virtual void cortar() = 0;
