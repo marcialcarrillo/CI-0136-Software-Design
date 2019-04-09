@@ -12,7 +12,10 @@ class Nodo : public Elementos{
 		string title;
 	public:
 		Nodo(string,int,int);
-		 ~Nodo();
+		~Nodo();
+		string pathToIcon;
+		void setIcon(string);
+		string getIcon();
 		void seleccionar();
 		void cortar();
 		void pegar();

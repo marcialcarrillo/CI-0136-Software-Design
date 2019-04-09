@@ -14,6 +14,16 @@ Nodo::Nodo(string title, int x, int y) : title( title ), x( x ), y( y )
 
 Nodo::~Nodo(){}
 
+void Nodo::setIcon(string inputPathToIcon)
+{
+	pathToIcon = inputPathToIcon;
+}
+
+string Nodo::getIcon()
+{
+	return pathToIcon;
+}
+
  void Nodo::seleccionar(){
 	 cout << "Se seleccionó el nodo" << title << endl;
  }
