@@ -9,6 +9,7 @@ class Diagrama : public vector < Elementos >
 	private:
 		Grafo grafo;
 		string pathToIcon;
+		string title;
 	public: 
 		Diagrama(Grafo);
 		~Diagrama();

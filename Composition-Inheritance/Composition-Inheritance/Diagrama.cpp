@@ -1,14 +1,15 @@
 #include "Diagrama.h"
 
-void setIcon(string inputPathToIcon)
+void Diagrama::setIcon(string inputPathToIcon)
 {
 	pathToIcon = inputPathToIcon;
 }
 
-string getIcon()
+string Diagrama::getIcon()
 {
 	return pathToIcon;
 }
+
 
 void Diagrama::agregarNodo(int nodo) {
 	this->push_back.grafo.getNode(nodo);
@@ -16,22 +17,26 @@ void Diagrama::agregarNodo(int nodo) {
 
 void Diagrama::seleccionar() {
 	cout << "Se seleccionó el nodo" << title << endl;
+
+void Diagrama::seleccionar() {
+	cout << "Se seleccionó el diagrama" << title << endl;
 }
-void Nodo::cortar() {
-	cout << "Se cortó el nodo " << title << endl;
+
+void Diagrama::cortar() {
+	cout << "Se cortó el diagrama " << title << endl;
 }
-void Nodo::pegar() {
-	cout << "Se pegó el nodo " << title << endl;
+void Diagrama::pegar() {
+	cout << "Se pegó el diagrama " << title << endl;
 }
-void Nodo::eliminar() {
-	cout << "Se eliminó el nodo" << title << endl;
+void Diagrama::eliminar() {
+	cout << "Se eliminó el diagrama" << title << endl;
 }
-void Nodo::aumentar(float aumento) {
-	cout << "Se aumentó el nodo" << title << " en " << aumento << endl;
+void Diagrama::aumentar(float aumento) {
+	cout << "Se aumentó el diagrama" << title << " en " << aumento << endl;
 }
-void Nodo::reducir(float decremento) {
-	cout << "Se redujo el nodo" << title << " en " << decremento << endl;
+void Diagrama::reducir(float decremento) {
+	cout << "Se redujo el diagrama" << title << " en " << decremento << endl;
 }
-void Nodo::dibujar() {
-	cout << "Se dibuja el nodo " << title << endl;
+void Diagrama::dibujar() {
+	cout << "Se dibuja el diagrama " << title << endl;
 }
