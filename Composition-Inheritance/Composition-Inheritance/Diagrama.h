@@ -1,20 +1,20 @@
 #pragma once
 #include <vector>
+#include <string.h>
 #include "Elementos.h"
 #include "Grafo.h"
 using namespace std;
 
-class Diagrama : public vector < Elementos >
+class Diagrama : public vector < Elementos * >, public Elementos
 {
 	private:
 		Grafo grafo;
 		string pathToIcon;
 		string title;
 	public: 
-		Diagrama(Grafo);
+		Diagrama(Grafo, string);
 		~Diagrama();
 		void agregarNodo(int);
-		string pathToIcon;
 		void setIcon(string);
 		string getIcon();
 		void seleccionar();
