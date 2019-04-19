@@ -14,7 +14,7 @@ class Diagrama : public vector < Elementos * >, public Elementos
 	public: 
 		Diagrama(Grafo, string);
 		~Diagrama();
-		void agregarNodo(int);
+		void agregarNodo(Elementos *);
 		void setIcon(string);
 		string getIcon();
 		void seleccionar();

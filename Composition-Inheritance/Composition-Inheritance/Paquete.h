@@ -14,7 +14,7 @@ private:
 public:
 	Paquete(Grafo, string);
 	~Paquete();
-	void agregarNodo(int);
+	void agregarNodo(Elementos *);
 	void setIcon(string);
 	string getIcon();
 	void seleccionar();

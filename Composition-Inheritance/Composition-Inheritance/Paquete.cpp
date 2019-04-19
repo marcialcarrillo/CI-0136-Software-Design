@@ -18,9 +18,8 @@ string Paquete::getIcon()
 	return pathToIcon;
 }
 
-
-void Paquete::agregarNodo(int nodo) {
-	push_back(grafo.getNode(nodo));
+void Paquete::agregarNodo(Elementos * elemento) {
+	push_back(elemento);
 }
 
 void Paquete::seleccionar() {

@@ -19,8 +19,8 @@ string Diagrama::getIcon()
 }
 
 
-void Diagrama::agregarNodo(int nodo) {
-	push_back(grafo.getNode(nodo));
+void Diagrama::agregarNodo(Elementos * elemento) {
+	push_back(elemento);
 }
 
 void Diagrama::seleccionar() {
