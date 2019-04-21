@@ -1,13 +1,17 @@
 #pragma once
 
 #include <string>
+#include <list>
 using namespace std;
 
 class Nodo{
-	protected:
+	protected:		
+		int id;
+		string title;
 		int x;
 		int y;
-		string title;
+
+		static int idProvider;
 	public:
 		Nodo(string,int,int);
 		virtual ~Nodo();

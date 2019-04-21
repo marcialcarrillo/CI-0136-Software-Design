@@ -1,9 +1,8 @@
 #include "Nodo.h"
 
 
-Nodo::Nodo(string title, int x, int y) : title( title ), x( x ), y( y )
+Nodo::Nodo(string title, int x, int y) :id(++idProvider), title( title ), x( x ), y( y )
 {
-
 }
 
 //Nodo::Nodo(string title, int x, int y)

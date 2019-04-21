@@ -18,18 +18,30 @@
     <ClCompile Include="Grafo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="Nodo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AdjacencyManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="Arista.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Grafo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="MatrixAdjacency.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="Nodo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ListAdjacency.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

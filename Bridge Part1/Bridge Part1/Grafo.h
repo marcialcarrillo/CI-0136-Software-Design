@@ -5,16 +5,22 @@
 #include "Arista.h"
 #include <vector>
 #include <sstream>
+#include <string>
+#include "AdjacencyManager.h"
+
 using namespace std;
 
 class Grafo{
 	private:
 		vector<Nodo *> nodos;
 		map<int, Arista *> aristas;
+		AdjacencyManager* adjManager;
+		int get_cantor_pair(int, int);
+		
 	public:
-		Grafo();
+		Grafo(AdjacencyManager*);
 		~Grafo();
 		void addNode(Nodo *);
 		void addRelation(int, int, Arista *);
-		string getRelation(int, int) const;
+		string getRelation(int, int);
 };
