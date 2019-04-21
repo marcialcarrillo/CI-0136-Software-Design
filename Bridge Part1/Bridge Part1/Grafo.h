@@ -23,4 +23,6 @@ class Grafo{
 		void addNode(Nodo *);
 		void addRelation(int, int, Arista *);
 		string getRelation(int, int);
+		bool isAdjacent(int, int);
+		//void addAdjacency(int, int); //included in "addRelation method
 };

@@ -36,4 +36,10 @@ public:
 		}
 	}
 
+	vector<int> getAllAdjacencies(int node) override
+	{
+		vector<int> result{ begin(adjancency_list[node]), end(adjancency_list[node]) };
+		return result;
+	}
+
 };

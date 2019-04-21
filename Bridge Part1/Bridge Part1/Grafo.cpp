@@ -28,6 +28,7 @@ void Grafo::addNode(Nodo * nodo){
 void Grafo::addRelation(int nodo1, int nodo2, Arista * arista){
 	int key = get_cantor_pair(nodo1, nodo2);
 	aristas.insert( pair< int, Arista * >(key, arista) );
+	adjManager->addAdjacency(nodo1, nodo2);
 }
 
 string Grafo::getRelation(int nodo1, int nodo2) {
@@ -43,4 +44,14 @@ string Grafo::getRelation(int nodo1, int nodo2) {
 	}
 	return oss.str();
 
+}
+
+bool Grafo::isAdjacent(int node1, int node2)
+{
+	return adjManager->isAdjacent(node1, node2);
+}
+
+void Grafo::addAdjacency(int node1, int node2)
+{
+	adjManager->addAdjacency(node1, node2);
 }

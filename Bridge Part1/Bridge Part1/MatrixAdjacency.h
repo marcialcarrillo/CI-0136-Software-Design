@@ -31,4 +31,18 @@ public:
 		return adjancency_matrix[node1][node2];
 	}
 
+	vector<int> getAllAdjacencies(int node) override
+	{
+		vector<int> result;
+		for (int i = 0; i < adjancency_matrix[node].size(); i++)
+		{
+			if (adjancency_matrix[node][i] == true)
+			{
+				result.push_back(i);
+			}
+		}
+		return result;
+	}
+
+
 };
