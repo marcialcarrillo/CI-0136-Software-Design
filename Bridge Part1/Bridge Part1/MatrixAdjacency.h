@@ -3,7 +3,7 @@
 
 using namespace std;
 
-class MatrixAdjacency : AdjacencyManager {
+class MatrixAdjacency : public AdjacencyManager {
 
 private:
 	std::vector<vector<bool>> adjancency_matrix;

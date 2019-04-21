@@ -16,5 +16,9 @@ class Arista{
 			this->second = second;
 		}
 		virtual ~Arista() {}
-		virtual string toString() const = 0;
+		string toString()
+		{
+			ostringstream oss;
+			oss << "This arrow connects node: " << first->id << " with node: " << second->id;
+		}
 };

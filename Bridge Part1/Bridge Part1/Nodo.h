@@ -5,14 +5,14 @@
 using namespace std;
 
 class Nodo{
-	protected:		
+	public:		
 		int id;
 		string title;
 		int x;
 		int y;
 
 		static int idProvider;
-	public:
+
 		Nodo(string,int,int);
 		virtual ~Nodo();
 };

@@ -51,7 +51,14 @@ bool Grafo::isAdjacent(int node1, int node2)
 	return adjManager->isAdjacent(node1, node2);
 }
 
-void Grafo::addAdjacency(int node1, int node2)
+vector<int> Grafo::getAllAdjacencies(int node)
 {
-	adjManager->addAdjacency(node1, node2);
+	return adjManager->getAllAdjacencies(node);
 }
+
+
+
+//void Grafo::addAdjacency(int node1, int node2)
+//{
+//	adjManager->addAdjacency(node1, node2);
+//}

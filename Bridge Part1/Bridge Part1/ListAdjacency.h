@@ -5,7 +5,7 @@
 
 using namespace std;
 
-class ListAdjacency : AdjacencyManager {
+class ListAdjacency : public AdjacencyManager {
 
 private:
 	std::vector<list<int>> adjancency_list;

@@ -122,6 +122,7 @@
   <ItemGroup>
     <ClInclude Include="AdjacencyManager.h" />
     <ClInclude Include="Arista.h" />
+    <ClInclude Include="AristaObject.h" />
     <ClInclude Include="Grafo.h" />
     <ClInclude Include="ListAdjacency.h" />
     <ClInclude Include="MatrixAdjacency.h" />
