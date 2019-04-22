@@ -5,7 +5,7 @@
 #include "Grafo.h"
 using namespace std;
 
-class Diagrama : public vector < Elementos * >, public Elementos < Diagrama >
+class Diagrama : public vector < Nodo * >, public Elementos < Diagrama >
 {
 	private:
 		Grafo grafo;
@@ -13,7 +13,7 @@ class Diagrama : public vector < Elementos * >, public Elementos < Diagrama >
 	public: 
 		Diagrama(Grafo, string);
 		~Diagrama();
-		void agregarNodo(Elementos *);
+		void agregarNodo(Nodo *);
 		void setIcon(string);
 		string getIcon();
 		

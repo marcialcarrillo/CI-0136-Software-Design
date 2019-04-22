@@ -19,7 +19,7 @@ string Diagrama::getIcon()
 }
 
 
-void Diagrama::agregarNodo(Elementos * elemento) {
+void Diagrama::agregarNodo(Nodo * elemento) {
 	push_back(elemento);
 }
 

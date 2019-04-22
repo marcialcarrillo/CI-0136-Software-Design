@@ -18,6 +18,6 @@ string Paquete::getIcon()
 	return pathToIcon;
 }
 
-void Paquete::agregarNodo(Elementos * elemento) {
+void Paquete::agregarNodo(Nodo * elemento) {
 	push_back(elemento);
 }
