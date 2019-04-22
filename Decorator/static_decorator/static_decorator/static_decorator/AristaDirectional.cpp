@@ -2,11 +2,11 @@
 
 	AristaDirectional::AristaDirectional()
     {
-
+		this->directional = false;
     }
 	AristaDirectional::AristaDirectional(const bool directional)
     {
-
+		this->directional = directional;
     }
 
 	AristaDirectional::~AristaDirectional()

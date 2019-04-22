@@ -11,13 +11,12 @@ AristaDependency::AristaDependency(Arista& arista) : arista(arista), type("depen
 
 AristaDependency::~AristaDependency()
 {
-	cout << "destroys the dependency-type arrow" << endl;
 	(&arista)->~Arista();
 }
 
 string AristaDependency::toString() const
 {
 	ostringstream oss;
-	oss << type << "-type arrow.";
+	oss << arista.toString() << type << "-type arrow ";
 	return oss.str();
 }

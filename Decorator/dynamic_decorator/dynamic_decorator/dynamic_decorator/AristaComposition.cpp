@@ -11,13 +11,12 @@ AristaComposition::AristaComposition(Arista& arista) : arista(arista), type{ "co
 
 AristaComposition::~AristaComposition()
 {
-	cout << "destroys the association-type arrow" << endl;
 	(&arista)->~Arista();
 }
 
 string AristaComposition::toString() const
 {
 	ostringstream oss;
-	oss << type << "-type arrow.";
+	oss << arista.toString() << type << "-type arrow ";
 	return oss.str();
 }

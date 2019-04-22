@@ -11,13 +11,12 @@ AristaContainment::AristaContainment(Arista& arista) : arista(arista), type("con
 
 AristaContainment::~AristaContainment()
 {
-	cout << "destroys the containment-type arrow" << endl;
 	(&arista)->~Arista();
 }
 
 string AristaContainment::toString() const
 {
 	ostringstream oss;
-	oss << type << "-type arrow.";
+	oss << arista.toString() << type << "-type arrow ";
 	return oss.str();
 }

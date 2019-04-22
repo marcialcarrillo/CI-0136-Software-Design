@@ -1,13 +1,12 @@
 #pragma once
 #include "AristaDirectional.h"
 
-AristaDirectional::AristaDirectional(Arista& arista, bool directional) : arista(arista), directional(directional)
+AristaDirectional::AristaDirectional( bool directional) :directional(directional)
 {
 }
 
 AristaDirectional::~AristaDirectional()
 {
-	(&arista)->~Arista();
 }
 string AristaDirectional::toString() const
 {

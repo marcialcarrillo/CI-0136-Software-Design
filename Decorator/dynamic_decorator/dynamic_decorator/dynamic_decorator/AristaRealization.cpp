@@ -11,13 +11,12 @@ AristaRealization::AristaRealization(Arista& arista) : arista(arista), type("rea
 
 AristaRealization::~AristaRealization()
 {
-	cout << "destroys the realization-type arrow" << endl;
 	(&arista)->~Arista();
 }
 
 string AristaRealization::toString() const
 {
 	ostringstream oss;
-	oss << "A realization-type arrow.";
+	oss << arista.toString() << type << "-type arrow ";
 	return oss.str();
 }

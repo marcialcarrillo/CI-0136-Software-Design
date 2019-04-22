@@ -11,13 +11,12 @@ AristaGeneralization::AristaGeneralization(Arista& arista) : arista(arista), typ
 
 AristaGeneralization::~AristaGeneralization()
 {
-	cout << "destroys the generalization-type arrow" << endl;
 	(&arista)->~Arista();
 }
 
 string AristaGeneralization::toString() const
 {
 	ostringstream oss;
-	oss << "A generalization-type arrow.";
+	oss << arista.toString() << type << "-type arrow ";
 	return oss.str();
 }
