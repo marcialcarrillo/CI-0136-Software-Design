@@ -36,6 +36,7 @@ int main() {
 	diagrama.agregarNodo(&subpaquete);
 
 	diagrama.seleccionar();
+
 	cin.ignore();
 	return 0;
 }

@@ -4,11 +4,11 @@
 #include "Arista.h"
 using namespace std;
 
-class AristaAssociation : public Arista
+class AristaComposition : public Arista
 {
 public:
-	AristaAssociation(Arista& arista);
-	~AristaAssociation();
+	AristaComposition(Arista& arista);
+	~AristaComposition();
 	virtual string toString() const override;
 
 private:

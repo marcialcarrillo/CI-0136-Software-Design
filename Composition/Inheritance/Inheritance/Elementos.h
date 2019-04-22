@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <iostream>
+#include "Nodo.h"
 using namespace std;
 
 template< typename Self >
@@ -14,7 +15,7 @@ class Elementos
 
 		void seleccionar() {
 			cout << "Se seleccionó el " << this->title << endl;
-			for (Elementos* element : *static_cast<Self*>(this))
+			for (Nodo * element : *static_cast<Self*>(this))
 			{
 				cout << "     ";
 				element->seleccionar();
@@ -23,7 +24,7 @@ class Elementos
 
 		void cortar() {
 			cout << "Se cortó el " << this->title << endl;
-			for (Elementos* element : *static_cast<Self*>(this))
+			for (Nodo * element : *static_cast<Self*>(this))
 			{
 				cout << "     ";
 				element->cortar();
@@ -32,7 +33,7 @@ class Elementos
 
 		void pegar() {
 			cout << "Se pegó el " << this->title << endl;
-			for (Elementos* element : *static_cast<Self*>(this))
+			for (Nodo * element : *static_cast<Self*>(this))
 			{
 				cout << "     ";
 				element->pegar();
@@ -41,7 +42,7 @@ class Elementos
 
 		void eliminar() {
 			cout << "Se eliminó el " << this->title << endl;
-			for (Elementos* element : *static_cast<Self*>(this))
+			for (Nodo * element : *static_cast<Self*>(this))
 			{
 				cout << "     ";
 				element->eliminar();
@@ -50,7 +51,7 @@ class Elementos
 
 		void aumentar(float aumento) {
 			cout << "Se aumentó el " << this->title << " en " << aumento << endl;
-			for (Elementos* element : *static_cast<Self*>(this))
+			for (Nodo * element : *static_cast<Self*>(this))
 			{
 				cout << "     ";
 				element->aumentar(aumento);
@@ -59,7 +60,7 @@ class Elementos
 
 		void reducir(float decremento) {
 			cout << "Se redujo el " << this->title << " en " << decremento << endl;
-			for (Elementos* element : *static_cast<Self*>(this))
+			for (Nodo * element : *static_cast<Self*>(this))
 			{
 				cout << "     ";
 				element->reducir(decremento);
@@ -68,7 +69,7 @@ class Elementos
 
 		void dibujar() {
 			cout << "Se dibuja el " << this->title << endl;
-			for (Elementos* element : *static_cast<Self*>(this))
+			for (Nodo* element : *static_cast<Self*>(this))
 			{
 				cout << "     ";
 				element->seleccionar();

@@ -12,5 +12,5 @@ void GrafoUML::addRelation(int nodo1, int nodo2, Arista * arista){
 }
 
 string GrafoUML::getRelation(int nodo1, int nodo2){
-	grafo.getRelation(nodo1, nodo2);
+	return grafo.getRelation(nodo1, nodo2);
 }

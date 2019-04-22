@@ -115,6 +115,32 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Arista.h" />
+    <ClInclude Include="AristaAggregation.h" />
+    <ClInclude Include="AristaAssociation.h" />
+    <ClInclude Include="AristaComposition.h" />
+    <ClInclude Include="AristaContainment.h" />
+    <ClInclude Include="AristaDependency.h" />
+    <ClInclude Include="AristaDirectional.h" />
+    <ClInclude Include="AristaGeneralization.h" />
+    <ClInclude Include="AristaRealization.h" />
+    <ClInclude Include="Diagrama.h" />
+    <ClInclude Include="Elementos.h" />
+    <ClInclude Include="Grafo.h" />
+    <ClInclude Include="GrafoUML.h" />
+    <ClInclude Include="Nodo.h" />
+    <ClInclude Include="NodoUML.h" />
+    <ClInclude Include="Paquete.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AristaDirectional.cpp" />
+    <ClCompile Include="Diagrama.cpp" />
+    <ClCompile Include="Grafo.cpp" />
+    <ClCompile Include="GrafoUML.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Nodo.cpp" />
+    <ClCompile Include="NodoUML.cpp" />
+    <ClCompile Include="Paquete.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

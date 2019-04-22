@@ -33,7 +33,6 @@ int main() {
 	diagrama.agregarNodo(grafo.getNode(0));
 	diagrama.agregarNodo(grafo.getNode(1));
 	diagrama.agregarNodo(grafo.getNode(2));
-	diagrama.agregarNodo(&subpaquete);
 
 	diagrama.seleccionar();
 	cin.ignore();

@@ -5,7 +5,7 @@
 #include "Grafo.h"
 using namespace std;
 
-class Paquete : public list < Elementos < Nodo > * >, public Elementos < Paquete >
+class Paquete : public list < Nodo * >, public Elementos < Paquete >
 {
 private:
 	Grafo grafo;
@@ -13,7 +13,7 @@ private:
 public:
 	Paquete(Grafo, string);
 	~Paquete();
-	void agregarNodo(Elementos *);
+	void agregarNodo(Nodo *);
 	void setIcon(string);
 	string getIcon();
 
