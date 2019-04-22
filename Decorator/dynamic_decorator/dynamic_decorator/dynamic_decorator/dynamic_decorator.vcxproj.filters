@@ -15,51 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Arista.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="AristaAggregation.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="AristaDirectional.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Grafo.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GrafoUML.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Nodo.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="NodoUML.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="AristaAssociation.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="AristaComposition.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="AristaContainment.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="AristaDependency.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="AristaGeneralization.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="AristaRealization.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="AristaAggregation.cpp">
+    <ClCompile Include="AristaGeneralization.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="AristaDirectional.cpp">
+    <ClCompile Include="AristaRealization.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Grafo.cpp">
@@ -77,10 +36,13 @@
     <ClCompile Include="NodoUML.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="AristaComposition.cpp">
+    <ClCompile Include="AristaAggregation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="AristaAssociation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AristaComposition.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="AristaContainment.cpp">
@@ -89,11 +51,49 @@
     <ClCompile Include="AristaDependency.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="AristaGeneralization.cpp">
+    <ClCompile Include="AristaDirectional.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="AristaRealization.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Arista.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AristaAggregation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AristaAssociation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AristaComposition.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AristaContainment.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AristaDependency.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AristaDirectional.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AristaGeneralization.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AristaRealization.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Grafo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GrafoUML.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Nodo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NodoUML.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -5,7 +5,10 @@ Grafo::Grafo() {
 }
 
 Grafo::~Grafo() {
-
+	for (int i = 0; i < nodos.size(); i++)
+	{
+		delete nodos[i];
+	}
 }
 
 void Grafo::addNode(Nodo * nodo){
