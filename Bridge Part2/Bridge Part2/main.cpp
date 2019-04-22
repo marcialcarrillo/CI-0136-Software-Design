@@ -13,9 +13,7 @@ int main()
 {
 	
 
-	MatrixAdjacency* ma = new MatrixAdjacency;
-	//= new MatrixAdjacency;
-	Grafo graph(ma);
+	Grafo<MatrixAdjacency> graph;
 
 	Nodo* node0 = new Nodo("node0", 5, 5);
 	graph.addNode(node0);
@@ -58,9 +56,7 @@ int main()
 
 	///***** VIA LIST ****////
 
-	ListAdjacency* la = new ListAdjacency;
-	//= new MatrixAdjacency;
-	Grafo graphLA(la);
+	Grafo<ListAdjacency> graphLA;
 
 	Nodo* nodeLA0 = new Nodo("nodeLA0", 5, 5);
 	graphLA.addNode(nodeLA0);
