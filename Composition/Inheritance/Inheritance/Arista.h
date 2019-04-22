@@ -10,7 +10,10 @@ class Arista{
 		Nodo* first;
 		Nodo* second;
 	public:
-		Arista() {}
+		Arista() {
+			this->first = NULL;
+			this->second = NULL;
+		}
 		Arista(Nodo* first, Nodo* second){
 			this->first = first;
 			this->second = second;

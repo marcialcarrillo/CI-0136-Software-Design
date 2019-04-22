@@ -5,22 +5,16 @@
 #include "Elementos.h"
 using namespace std;
 
-class Nodo : public Elementos{
+class Nodo : public Elementos< Nodo >{
 	protected:
 		int x;
 		int y;
-		string title;
 	public:
 		Nodo(string,int,int);
 		~Nodo();
 		string pathToIcon;
 		void setIcon(string);
 		string getIcon();
-		void seleccionar();
-		void cortar();
-		void pegar();
-		void eliminar();
-		void aumentar(float);
-		void reducir(float);
-		void dibujar();
+		Nodo* begin();
+		Nodo* end();
 };

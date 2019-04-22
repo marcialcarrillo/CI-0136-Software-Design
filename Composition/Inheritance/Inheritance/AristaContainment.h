@@ -9,7 +9,6 @@ using namespace std;
 template < typename T >
 class AristaContainment : public T
 {
-    // Impide que se use ColoredShape con un tipo T que NO herede de Shape!!!
     static_assert(is_base_of<Arista, T>::value, "Template argument must be an Arista");
     
 public:
