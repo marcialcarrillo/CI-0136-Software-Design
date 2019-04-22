@@ -21,6 +21,8 @@ Grafo::~Grafo() {
 }
 
 void Grafo::addNode(Nodo * nodo){
+	nodo->id = idGenerator;
+	idGenerator++;
 	nodos.push_back(nodo);
 	adjManager->add_node();
 }
@@ -36,7 +38,7 @@ string Grafo::getRelation(int nodo1, int nodo2) {
 	ostringstream oss;
 	if (aristas.find(key) != aristas.end())
 	{
-		oss << (aristas.find(key)->second)->toString;
+		oss << aristas.find(key)->second->toString();
 	}
 	else
 	{

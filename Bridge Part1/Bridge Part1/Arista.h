@@ -20,5 +20,6 @@ class Arista{
 		{
 			ostringstream oss;
 			oss << "This arrow connects node: " << first->id << " with node: " << second->id;
+			return oss.str();
 		}
 };

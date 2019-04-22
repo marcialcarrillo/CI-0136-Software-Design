@@ -16,9 +16,10 @@ class Grafo{
 		map<int, Arista *> aristas;
 		AdjacencyManager* adjManager;
 		int get_cantor_pair(int, int);
+		int idGenerator = 0;
 		
 	public:
-		Grafo(AdjacencyManager&);
+		Grafo(AdjacencyManager*);
 		~Grafo();
 		void addNode(Nodo *);
 		void addRelation(int, int, Arista *);

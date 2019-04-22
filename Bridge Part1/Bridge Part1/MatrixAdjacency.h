@@ -11,9 +11,9 @@ private:
 public:
 	void add_node() override
 	{
-		for (auto int_vector : adjancency_matrix)
+		for (auto& int_vector : adjancency_matrix)
 		{
-			int_vector.push_back(0);
+			int_vector.push_back(false);
 		}
 		int current_matrix_size = adjancency_matrix.size() + 1;
 		vector<bool> vector_to_insert(current_matrix_size, false);
@@ -34,7 +34,7 @@ public:
 	vector<int> getAllAdjacencies(int node) override
 	{
 		vector<int> result;
-		for (int i = 0; i < adjancency_matrix[node].size(); i++)
+		for (int i = 0; i < (int)adjancency_matrix[node].size(); i++)
 		{
 			if (adjancency_matrix[node][i] == true)
 			{
