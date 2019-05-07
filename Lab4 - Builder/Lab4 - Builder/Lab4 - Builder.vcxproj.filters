@@ -33,6 +33,9 @@
     <ClInclude Include="JSONGraphPrinter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TagElement.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ArrowUML.cpp">
