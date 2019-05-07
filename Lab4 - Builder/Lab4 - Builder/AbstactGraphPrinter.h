@@ -1,7 +1,7 @@
 #pragma once
 
 
-class GraphPrinter
+class AbstractGraphPrinter
 {
 public:
 
