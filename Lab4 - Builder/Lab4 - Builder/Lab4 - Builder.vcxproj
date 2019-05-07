@@ -117,8 +117,10 @@
   <ItemGroup>
     <ClInclude Include="ArrowUML.h" />
     <ClInclude Include="ClassUML.h" />
-    <ClInclude Include="GraphPrinter.h" />
+    <ClInclude Include="AbstactGraphPrinter.h" />
     <ClInclude Include="GraphUML.h" />
+    <ClInclude Include="JSONGraphPrinter.h" />
+    <ClInclude Include="XMLGraphPrinter.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ArrowUML.cpp" />

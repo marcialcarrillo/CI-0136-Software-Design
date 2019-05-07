@@ -24,7 +24,13 @@
     <ClInclude Include="GraphUML.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GraphPrinter.h">
+    <ClInclude Include="AbstactGraphPrinter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="XMLGraphPrinter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="JSONGraphPrinter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

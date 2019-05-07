@@ -15,6 +15,7 @@ public:
 	string title;
 	vector<string> attributes;
 	vector<string> operations;
+
 	
 	virtual ~ClassUML() {};
 };
