@@ -36,6 +36,12 @@
     <ClInclude Include="XMLGraphPrinter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="MockXMLReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MockJSONReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ArrowUML.cpp">

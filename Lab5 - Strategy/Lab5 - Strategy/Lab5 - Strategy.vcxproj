@@ -120,6 +120,8 @@
     <ClInclude Include="ClassUML.h" />
     <ClInclude Include="GraphUML.h" />
     <ClInclude Include="JSONGraphPrinter.h" />
+    <ClInclude Include="MockJSONReader.h" />
+    <ClInclude Include="MockXMLReader.h" />
     <ClInclude Include="TagElement.h" />
     <ClInclude Include="XMLGraphPrinter.h" />
   </ItemGroup>
