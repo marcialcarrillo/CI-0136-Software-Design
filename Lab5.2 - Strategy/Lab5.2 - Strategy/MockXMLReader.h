@@ -1,19 +1,27 @@
 #pragma once
 #include "TagElement.h"
+#include "MockReader.h"
 
-class MockXMLReader
+class MockXMLReader : public MockReader
 {
 public:
 	TagElement* loaded_graph;
-	MockXMLReader(TagElement *input) : loaded_graph(input) {};
-	//MockXMLReader(TagElement *input)
-	//{
-	//	loaded_graph = input;
-	//	//loaded_graph = new TagElement("graph", "");
-	//};
+	//MockXMLReader(TagElement *input) : MockReader(*input) loaded_graph(input) {};
+	MockXMLReader(TagElement *input) : MockReader(input)
+	{
+		loaded_graph = input;
+		//loaded_graph = new TagElement("graph", "");
+	};
+	~MockXMLReader() {};
 
 	void read_file() //create mock file
 	{
+		cout << "SIMULATING THE READING & PARSING OF A XML FILE!" << endl;
+
+		//Since the difference lies on HOW the file is read and NOT on the file structures produced we reuse the same MockClass for both approaches
+		//However, in a real implementation, we would retrive the information we are adding below to the loaded_graph by either using a library to read the XML file
+		//(in this case) or by creating a parser that reads the file.
+
 		loaded_graph->add_attribute("id", "0");
 		loaded_graph->add_attribute("edgedefault", "directed");
 		loaded_graph->add_element("node","");

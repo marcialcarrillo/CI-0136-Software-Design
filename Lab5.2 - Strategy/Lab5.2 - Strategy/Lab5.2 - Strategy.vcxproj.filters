@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AbstactGraphPrinter.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="ArrowUML.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -27,22 +24,16 @@
     <ClInclude Include="GraphUML.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="JSONGraphPrinter.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TagElement.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="XMLGraphPrinter.h">
+    <ClInclude Include="MockReader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MockXMLReader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MockJSONReader.h">
+    <ClInclude Include="TagElement.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MockReader.h">
+    <ClInclude Include="MockJSONReader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
