@@ -1,15 +1,42 @@
 #include "GraphUML.h"
 
-int GraphUML::get_cantor_pair(int node1, int node2)
+GraphUML::GraphUML(){
+	this->directed = true;
+	this->graph_id = "g0";
+}
+
+GraphUML::GraphUML(bool directed, string id) {
+	this->directed = directed;
+	this->graph_id = id;
+}
+
+string GraphUML::get_graph_id()
 {
-	int x = node1;
-	int y = node2;
-	if (node1 < node2) //we sort the nodes to remove the importance of the order in which the nodes are inputed in the function, to avoid duplicates in the arrow map
-	{
-		x = node2;
-		y = node1;
-	}
-	return ((x + y) * (x + y + 1)) / 2 + y;;
+	return graph_id;
+}
+
+bool GraphUML::get_directed() {
+	return directed;
+}
+
+vector<ClassUML*> GraphUML::getClasses()
+{
+	return classes;
+}
+
+vector<ArrowUML*> GraphUML::getArrows()
+{
+	return arrows;
+}
+
+ClassUML* GraphUML::getClass(int index)
+{
+	return classes[index];
+}
+
+ArrowUML* GraphUML::getArrow(int index)
+{
+	return arrows[index];
 }
 
 void GraphUML::add_node(ClassUML * node)
@@ -19,5 +46,5 @@ void GraphUML::add_node(ClassUML * node)
 
 void GraphUML::add_arrow(ArrowUML * arrow)
 {
-	arrows.emplace(get_cantor_pair(arrow->source, arrow->target),arrow);
+	arrows.push_back(arrow);
 }

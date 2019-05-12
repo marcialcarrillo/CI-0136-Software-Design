@@ -8,14 +8,19 @@ class GraphUML
 {
 	private:
 		bool directed;
-		int graph_id;
+		string graph_id;
 		vector<ClassUML *> classes;
 		vector<ArrowUML *> arrows;
-		int node_id_generator = 0;
-		int arrow_id_generator = 0;
 
 	public:
-		int get_cantor_pair(int node1, int node2);
+		GraphUML();
+		GraphUML(bool directed, string id);
+		string get_graph_id();
+		bool get_directed();
+		vector<ClassUML*> getClasses();
+		vector<ArrowUML*> getArrows();
+		ClassUML* getClass(int index);
+		ArrowUML* getArrow(int index);
 		void add_node(ClassUML* node);
 		void add_arrow(ArrowUML* arrow);
 

@@ -7,14 +7,11 @@ using namespace std;
 
 class ClassUML {
 public:
-
-	ClassUML(int id, string title);
-	ClassUML(int id, string title, vector<string> attributes, vector<string> operations);
-	int id;
+	ClassUML(string id, string title);
+	ClassUML(string id, string title, vector<string> attributes, vector<string> operations);
+	~ClassUML() {};
+	string id;
 	string title;
 	vector<string> attributes;
 	vector<string> operations;
-
-	
-	virtual ~ClassUML() {};
 };
