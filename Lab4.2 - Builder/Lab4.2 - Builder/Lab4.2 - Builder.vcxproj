@@ -115,10 +115,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\Lab4 - Builder\x64\Debug\AbstactGraphPrinter.h" />
-    <ClInclude Include="..\..\..\Lab4 - Builder\x64\Debug\ArrowUML.h" />
-    <ClInclude Include="..\..\..\Lab4 - Builder\x64\Debug\ClassUML.h" />
-    <ClInclude Include="..\..\..\Lab4 - Builder\x64\Debug\GraphUML.h" />
+    <ClInclude Include="AbstactGraphPrinter.h" />
+    <ClInclude Include="ArrowUML.h" />
+    <ClInclude Include="ClassUML.h" />
+    <ClInclude Include="GraphUML.h" />
     <ClInclude Include="JSONGraphPrinter.h" />
     <ClInclude Include="XMLGraphPrinter.h" />
   </ItemGroup>
@@ -126,6 +126,7 @@
     <ClCompile Include="ArrowUML.cpp" />
     <ClCompile Include="ClassUML.cpp" />
     <ClCompile Include="GraphUML.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

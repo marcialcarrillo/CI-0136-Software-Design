@@ -37,7 +37,7 @@ void XMLGraphPrinter::print_header() {
 	serialization += "< graphml xmlns = \"http://graphml.graphdrawing.org/xmlns\"\n";
 	serialization += "xmlns:xsi = \"http://www.w3.org/2001/XMLSchema-instance\"\n";
 	serialization += "xsi : schemaLocation = \"http://graphml.graphdrawing.org/xmlns\n";
-	serialization += "http ://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd\">";
+	serialization += "http ://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd\">\n";
 	serialization += "\t<key id = \"at\" for = \"node\" attr.name = \"attribute\" attr.type = \"string\"/>\n";
 	serialization += "\t<key id = \"mt\" for = \"node\" attr.name = \"method\" attr.type = \"string\"/>\n";
 	serialization += "\t<key id = \"tp\" for = \"edge\" attr.name = \"type\" attr.type = \"string\"/>\n";
@@ -113,4 +113,7 @@ void XMLGraphPrinter::print_graph(GraphUML* graph) {
 	else {
 		serialization += "edgedefault = \"undirected\">\n";
 	}
+	print_classes(graph->getClasses());
+	print_arrows(graph->getArrows());
+	print_end();
 }
