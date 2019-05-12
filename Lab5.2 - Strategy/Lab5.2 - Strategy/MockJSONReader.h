@@ -1,115 +1,75 @@
 #pragma once
+#include "TagElement.h"
+#include "MockReader.h"
 
-#include "AbstactGraphPrinter.h"
-#include <string>
+class MockJSONReader : public MockReader
+{
+public:
+	TagElement* loaded_graph;
+	//MockJSONReader(TagElement *input) : MockReader(*input) loaded_graph(input) {};
+	MockJSONReader(TagElement *input) : MockReader(input)
+	{
+		loaded_graph = input;
+		//loaded_graph = new TagElement("graph", "");
+	};
+	~MockJSONReader() {};
 
-class XMLGraphPrinter : public AbstractGraphPrinter {
-	
-	private:
-		string serialization;
-	public:
-		XMLGraphPrinter();
-		~XMLGraphPrinter();
-		virtual void print_graph(GraphUML* graph) override;
-		virtual void print_header() override;
-		virtual void print_classes(vector< ClassUML* > classes) override;
-		virtual void print_class(ClassUML* node) override;
-		virtual void print_arrows(vector< ArrowUML* > arrows) override;
-		virtual void print_arrow(ArrowUML* arrow) override;
-		virtual void print_end() override;
-		virtual string get_serialization() override;
+	void read_file() //create mock file
+	{
+		cout << "SIMULATING THE READING & PARSING OF A JSON FILE!" << endl;
+
+		//Since the difference lies on HOW the file is read and NOT on the file structures produced we reuse the same MockClass for both approaches
+		//However, in a real implementation, we would retrive the information we are adding below to the loaded_graph by either using a library to read the JSON file
+		//(in this case) or by creating a parser that reads the file.
+
+		loaded_graph->add_attribute("id", "0");
+		loaded_graph->add_attribute("edgedefault", "directed");
+		loaded_graph->add_element("node", "");
+		loaded_graph->elements[0].add_attribute("id", "0");
+		loaded_graph->elements[0].add_attribute("name", "ClassBase");
+		loaded_graph->elements[0].add_element("attribute", "+classBase1: int"); //all node elements are marked with "data key=" so it is ommited on read
+		loaded_graph->elements[0].add_element("operation", "+int getClassBase 1()");
+		loaded_graph->elements[0].add_element("operation", "+void setClassBase1(int o)");
+		loaded_graph->add_element("node", "");
+		loaded_graph->elements[1].add_attribute("id", "1");
+		loaded_graph->elements[1].add_attribute("name", "ClassA");
+		loaded_graph->elements[1].add_element("attribute", "+classA: float");
+		loaded_graph->elements[1].add_element("operation", "+float getClassA()");
+		loaded_graph->elements[1].add_element("operation", "+void setClassA(float o)");
+		loaded_graph->add_element("node", "");
+		loaded_graph->elements[2].add_attribute("id", "2");
+		loaded_graph->elements[2].add_attribute("name", "ClassB");
+		loaded_graph->elements[2].add_element("attribute", "+classB: string");
+		loaded_graph->elements[2].add_element("operation", "+string getClassB()");
+		loaded_graph->elements[2].add_element("operation", "+void setClassB(string o)");
+		loaded_graph->add_element("node", "");
+		loaded_graph->elements[3].add_attribute("id", "3");
+		loaded_graph->elements[3].add_attribute("name", "ClassC");
+		loaded_graph->add_element("node", "");
+		loaded_graph->elements[4].add_attribute("id", "4");
+		loaded_graph->elements[4].add_attribute("name", "ClassD");
+		loaded_graph->add_element("edge", "");
+		loaded_graph->elements[5].add_attribute("id", "0");
+		loaded_graph->elements[5].add_attribute("source", "1");
+		loaded_graph->elements[5].add_attribute("target", "0");
+		loaded_graph->elements[5].add_attribute("type", "inheritance");
+		loaded_graph->add_element("edge", "");
+		loaded_graph->elements[6].add_attribute("id", "1");
+		loaded_graph->elements[6].add_attribute("source", "2");
+		loaded_graph->elements[6].add_attribute("target", "0");
+		loaded_graph->elements[6].add_attribute("type", "inheritance");
+		loaded_graph->add_element("edge", "");
+		loaded_graph->elements[7].add_attribute("id", "2");
+		loaded_graph->elements[7].add_attribute("source", "3");
+		loaded_graph->elements[7].add_attribute("target", "1");
+		loaded_graph->elements[7].add_attribute("type", "composition");
+		loaded_graph->add_element("edge", "");
+		loaded_graph->elements[8].add_attribute("id", "3");
+		loaded_graph->elements[8].add_attribute("source", "4");
+		loaded_graph->elements[8].add_attribute("target", "2");
+		loaded_graph->elements[8].add_attribute("type", "dependency");
+
+		//return *loaded_graph;
+	};
 };
 
-XMLGraphPrinter::XMLGraphPrinter() : serialization("")
-{
-}
-
-XMLGraphPrinter::~XMLGraphPrinter()
-{
-}
-
-void XMLGraphPrinter::print_header() {
-	serialization += "<?xml version=\"1.0\" encoding=\"UTF - 8\"?>\n";
-	serialization += "< graphml xmlns = \"http://graphml.graphdrawing.org/xmlns\"\n";
-	serialization += "xmlns:xsi = \"http://www.w3.org/2001/XMLSchema-instance\"\n";
-	serialization += "xsi : schemaLocation = \"http://graphml.graphdrawing.org/xmlns\n";
-	serialization += "http ://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd\">";
-	serialization += "\t<key id = \"at\" for = \"node\" attr.name = \"attribute\" attr.type = \"string\"/>\n";
-	serialization += "\t<key id = \"mt\" for = \"node\" attr.name = \"method\" attr.type = \"string\"/>\n";
-	serialization += "\t<key id = \"tp\" for = \"edge\" attr.name = \"type\" attr.type = \"string\"/>\n";
-
-}
-
-void XMLGraphPrinter::print_classes(vector<ClassUML*> classes)
-{
-	for (int i = 0; i < classes.size(); i++)
-	{
-		print_class(classes[i]);
-	}
-}
-
-void XMLGraphPrinter::print_class(ClassUML* node)
-{
-	serialization += "\t\t<node id = \"" + node->id + "\"/>\n";
-	bool hasData = false;
-	if (node->attributes.size() > 0) {
-		hasData = true;
-		for (int i = 0; i < node->attributes.size(); i++)
-		{
-			serialization += "\t\t\t<data key = \"at\">" + node->attributes[i] + "< / data>\n";
-		}
-	}
-
-	if (node->operations.size() > 0) {
-		hasData = true;
-		for (int i = 0; i < node->operations.size(); i++)
-		{
-			serialization += "\t\t\t<data key = \"mt\">" + node->operations[i] + "< / data>\n";
-		}
-	}
-
-	if (hasData) {
-		serialization += "\t\t</node>\n";
-	}
-
-}
-
-void XMLGraphPrinter::print_arrows(vector<ArrowUML*> arrows)
-{
-	for (int i = 0; i < arrows.size(); i++)
-	{
-		print_arrow(arrows[i]);
-	}
-}
-
-void XMLGraphPrinter::print_arrow(ArrowUML* arrow)
-{
-	serialization += "\t\t<edge id = \"" + arrow->id + "\" source = \" " + arrow->source + "\" target = \"" + arrow->target + "\">\n";
-	serialization += "\t\t\t<data key = \"tp\">" + arrow->type + "< / data>\n";
-	serialization += "\t\t</edge>\n";
-}
-
-
-void XMLGraphPrinter::print_end() {
-	serialization += "\t</graph>\n";
-	serialization += "</graphml>";
-}
-
-string XMLGraphPrinter::get_serialization()
-{
-	return serialization;
-}
-
-void XMLGraphPrinter::print_graph(GraphUML* graph) {
-	print_header();
-	serialization += "\t<graph id = \"" + graph->get_graph_id() +"\"";
-	if (graph->get_directed()) {
-		serialization += "edgedefault = \"directed\">\n";
-	}
-	else {
-		serialization += "edgedefault = \"undirected\">\n";
-	}
-	print_classes(graph->getClasses());
-	print_arrows(graph->getArrows());
-	print_end();
-}
