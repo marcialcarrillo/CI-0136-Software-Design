@@ -17,8 +17,6 @@ int main()
 
 	GraphUML imported_graph;
 
-	//Translating the file we read, a TagElement, into an internal graph (GraphUML)
-
 	for (int i = 0; i < imported_tags.elements.size(); i++)
 	{
 		int type;
@@ -89,11 +87,10 @@ int main()
 			break;
 
 		default:
-			cout << "got an undentified graph type, NO node OR arrow (Error)" << endl;
+			cout << "got a default case my boy" << endl;
 		}
 	}
 
-	//Translation completed; we have the graph in the internal memory
 
 	cin.ignore();
 	return 0;

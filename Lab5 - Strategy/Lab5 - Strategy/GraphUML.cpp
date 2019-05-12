@@ -12,12 +12,17 @@ int GraphUML::get_cantor_pair(int node1, int node2)
 	return ((x + y) * (x + y + 1)) / 2 + y;;
 }
 
-void GraphUML::add_node(ClassUML * node)
+void GraphUML::add_node(ClassUML node)
 {
+	if (node.id == -1)
+	{
+		node.id = node_id_generator;
+		node_id_generator++;
+	}
 	classes.push_back(node);
 }
 
-void GraphUML::add_arrow(ArrowUML * arrow)
+void GraphUML::emplace_arrow(string type, int source, int target)
 {
-	arrows.emplace(get_cantor_pair(arrow->source, arrow->target),arrow);
+	arrows.emplace(arrows.end(), type, source, target);
 }
