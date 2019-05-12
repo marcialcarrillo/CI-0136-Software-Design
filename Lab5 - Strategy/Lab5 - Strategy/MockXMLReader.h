@@ -5,11 +5,12 @@ class MockXMLReader
 {
 public:
 	TagElement* loaded_graph;
-	MockXMLReader(TagElement *input)
-	{
-		loaded_graph = input;
-		//loaded_graph = new TagElement("graph", "");
-	};
+	MockXMLReader(TagElement *input) : loaded_graph(input) {};
+	//MockXMLReader(TagElement *input)
+	//{
+	//	loaded_graph = input;
+	//	//loaded_graph = new TagElement("graph", "");
+	//};
 
 	void read_file() //create mock file
 	{

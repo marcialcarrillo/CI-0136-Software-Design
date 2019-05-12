@@ -77,7 +77,7 @@ int main()
 		
 
 			node = new ClassUML(stoi(imported_tags.elements[i].attributes[0].text), imported_tags.elements[i].attributes[1].text, node_attributes, node_operations);
-			cout << "got a node!" << endl;
+			cout << "added node " << i << "!" << endl;
 			imported_graph.add_node(*node);
 			node_attributes.clear();
 			node_operations.clear();
