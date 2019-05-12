@@ -7,13 +7,13 @@
 
 class ArrowUML {
 public:
-	string id;
+	int id;
 	string type;
-	string source;
-	string target;
+	int source;
+	int target;
 
 	ArrowUML();
-	ArrowUML(string id, string type, string source, string target);
+	ArrowUML(string type, int source, int target);
 	virtual ~ArrowUML() {}
 	string toString();
 	
