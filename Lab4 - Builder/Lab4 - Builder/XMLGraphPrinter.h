@@ -1,5 +1,7 @@
 #pragma once
 
+#pragma once
+
 #include "AbstactGraphPrinter.h"
 #include <string>
 
